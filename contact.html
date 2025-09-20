@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TechFlow</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-lightning-charge text-primary"></i>
+                TechFlow
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html#services">Web Development</a></li>
+                            <li><a class="dropdown-item" href="about.html#services">Mobile Apps</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="about.html#services">Consulting</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#getQuoteModal">
+                    Get Quote
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center text-center">
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold mb-4">Get In Touch</h1>
+                    <p class="lead mb-4">
+                        Ready to start your next project? We'd love to hear from you. 
+                        Let's discuss how we can help bring your ideas to life.
+                    </p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Contact</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <h3 class="mb-4">Send us a Message</h3>
+                        <form id="contactForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                    <div class="invalid-feedback">
+                                        Please provide your first name.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                    <div class="invalid-feedback">
+                                        Please provide your last name.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email address.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="company" class="form-label">Company/Organization</label>
+                                <input type="text" class="form-control" id="company">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <select class="form-control" id="subject" required>
+                                    <option value="">Choose a subject...</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="mobile-app">Mobile App Development</option>
+                                    <option value="ui-ux-design">UI/UX Design</option>
+                                    <option value="consulting">Digital Consulting</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="partnership">Partnership Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a subject.
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="budget" class="form-label">Project Budget Range</label>
+                                <select class="form-control" id="budget">
+                                    <option value="">Select budget range...</option>
+                                    <option value="under-5k">Under $5,000</option>
+                                    <option value="5k-10k">$5,000 - $10,000</option>
+                                    <option value="10k-25k">$10,000 - $25,000</option>
+                                    <option value="25k-50k">$25,000 - $50,000</option>
+                                    <option value="50k-100k">$50,000 - $100,000</option>
+                                    <option value="over-100k">Over $100,000</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="timeline" class="form-label">Project Timeline</label>
+                                <select class="form-control" id="timeline">
+                                    <option value="">Select timeline...</option>
+                                    <option value="asap">ASAP</option>
+                                    <option value="1-month">Within 1 month</option>
+                                    <option value="2-3-months">2-3 months</option>
+                                    <option value="3-6-months">3-6 months</option>
+                                    <option value="6-months-plus">6+ months</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="6" 
+                                    placeholder="Tell us about your project, goals, and any specific requirements..." required></textarea>
+                                <div class="invalid-feedback">
+                                    Please provide a message.
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Subscribe to our newsletter for updates and insights
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="privacy" required>
+                                    <label class="form-check-label" for="privacy">
+                                        I agree to the <a href="#" class="text-primary">Privacy Policy</a> and 
+                                        <a href="#" class="text-primary">Terms of Service</a> *
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        You must agree to our terms and privacy policy.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-custom btn-lg">
+                                <i class="bi bi-send"></i> Send Message
+                            </button>
+                        </form>
+                        
+                        <!-- Success Alert -->
+                        <div id="successAlert" class="alert alert-success mt-4 d-none" role="alert">
+                            <i class="bi bi-check-circle"></i>
+                            <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you within 24 hours.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-lg-4">
+                    <div class="h-100">
+                        <h3 class="mb-4">Contact Information</h3>
+                        
+                        <div class="contact-info-card mb-4 p-4 bg-light rounded">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="feature-icon me-3 flex-shrink-0">
+                                    <i class="bi bi-geo-alt"></i>
+                                </div>
+                                <div>
+                                    <h6>Office Address</h6>
+                                    <p class="text-muted mb-0">
+                                        123 Innovation Drive<br>
+                                        Tech District, TD 12345<br>
+                                        United States
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-card mb-4 p-4 bg-light rounded">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="feature-icon me-3 flex-shrink-0">
+                                    <i class="bi bi-telephone"></i>
+                                </div>
+                                <div>
+                                    <h6>Phone Numbers</h6>
+                                    <p class="text-muted mb-1">
+                                        <strong>Main:</strong> +1 (555) 123-4567
+                                    </p>
+                                    <p class="text-muted mb-0">
+                                        <strong>Support:</strong> +1 (555) 987-6543
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-card mb-4 p-4 bg-light rounded">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="feature-icon me-3 flex-shrink-0">
+                                    <i class="bi bi-envelope"></i>
+                                </div>
+                                <div>
+                                    <h6>Email Addresses</h6>
+                                    <p class="text-muted mb-1">
+                                        <strong>General:</strong> info@techflow.com
+                                    </p>
+                                    <p class="text-muted mb-1">
+                                        <strong>Sales:</strong> sales@techflow.com
+                                    </p>
+                                    <p class="text-muted mb-0">
+                                        <strong>Support:</strong> support@techflow.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-card mb-4 p-4 bg-light rounded">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="feature-icon me-3 flex-shrink-0">
+                                    <i class="bi bi-clock"></i>
+                                </div>
+                                <div>
+                                    <h6>Business Hours</h6>
+                                    <p class="text-muted mb-1">
+                                        <strong>Mon - Fri:</strong> 9:00 AM - 6:00 PM
+                                    </p>
+                                    <p class="text-muted mb-1">
+                                        <strong>Saturday:</strong> 10:00 AM - 4:00 PM
+                                    </p>
+                                    <p class="text-muted mb-0">
+                                        <strong>Sunday:</strong> Closed
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <h6 class="mb-3">Follow Us</h6>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="btn btn-outline-primary">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-primary">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-primary">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-primary">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-primary">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center mb-5">Find Us</h3>
+                    <div class="map-container rounded shadow">
+                        <!-- Embedded Map Placeholder -->
+                        <div class="bg-secondary d-flex align-items-center justify-content-center text-white rounded" 
+                             style="height: 400px;">
+                            <div class="text-center">
+                                <i class="bi bi-geo-alt display-1 mb-3"></i>
+                                <h5>Interactive Map</h5>
+                                <p class="mb-0">123 Innovation Drive, Tech District, TD 12345</p>
+                                <small class="text-muted">
+                                    (In a real project, you would embed Google Maps or similar here)
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="text-center mb-5">Frequently Asked Questions</h3>
+                    
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    How long does a typical project take?
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" 
+                                aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Project timelines vary based on complexity and scope. A simple website might take 
+                                    2-4 weeks, while a complex web application could take 3-6 months. We provide detailed 
+                                    timelines during our initial consultation.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    What is your development process?
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" 
+                                aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our process includes: Discovery & Planning, Design & Prototyping, Development & Testing, 
+                                    Launch & Deployment, and Ongoing Support. We maintain regular communication throughout 
+                                    each phase to ensure your vision is realized.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    Do you provide ongoing support?
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" 
+                                aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! We offer various support packages including maintenance, updates, security monitoring, 
+                                    and technical support. We're committed to ensuring your project continues to perform 
+                                    optimally long after launch.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    What technologies do you work with?
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" 
+                                aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We work with modern technologies including React, Vue.js, Node.js, Python, PHP, 
+                                    React Native, Flutter, and various cloud platforms. We choose the best technology 
+                                    stack based on your specific project requirements.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">
+                        <i class="bi bi-lightning-charge text-primary"></i>
+                        TechFlow
+                    </h5>
+                    <p class="text-muted">
+                        Creating digital experiences that drive business growth and user engagement.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-decoration-none">
+                            <i class="bi bi-facebook fs-5"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <i class="bi bi-twitter fs-5"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <i class="bi bi-linkedin fs-5"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <i class="bi bi-instagram fs-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html#services">Web Development</a></li>
+                        <li><a href="about.html#services">Mobile Apps</a></li>
+                        <li><a href="about.html#services">UI/UX Design</a></li>
+                        <li><a href="about.html#services">Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h6 class="mb-3">Newsletter</h6>
+                    <p class="text-muted">Subscribe to get updates on our latest projects and insights.</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Your email">
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2024 TechFlow. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="me-3">Privacy Policy</a>
+                    <a href="#" class="me-3">Terms of Service</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Get Quote Modal -->
+    <div class="modal fade" id="getQuoteModal" tabindex="-1" aria-labelledby="getQuoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="getQuoteModalLabel">
+                        <i class="bi bi-calculator"></i> Get Project Quote
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="projectName" class="form-label">Project Name</label>
+                                <input type="text" class="form-control" id="projectName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="projectBudget" class="form-label">Budget Range</label>
+                                <select class="form-control" id="projectBudget">
+                                    <option>$5,000 - $10,000</option>
+                                    <option>$10,000 - $25,000</option>
+                                    <option>$25,000 - $50,000</option>
+                                    <option>$50,000+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="clientName" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="clientName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="clientEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="clientEmail" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectType" class="form-label">Project Type</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="webDev">
+                                <label class="form-check-label" for="webDev">Website Development</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="mobileApp">
+                                <label class="form-check-label" for="mobileApp">Mobile Application</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="uiDesign">
+                                <label class="form-check-label" for="uiDesign">UI/UX Design</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectDescription" class="form-label">Project Description</label>
+                            <textarea class="form-control" id="projectDescription" rows="4" 
+                                placeholder="Tell us about your project requirements..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="bi bi-send"></i> Send Quote Request
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/custom.js"></script>
+</body>
+</html>

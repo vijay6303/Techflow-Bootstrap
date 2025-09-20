@@ -1,0 +1,227 @@
+/* Custom CSS for Bootstrap 5 UI Project */
+
+:root {
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --custom-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --custom-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom navbar styling */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--bs-primary) !important;
+}
+
+/* Hero section */
+.hero-section {
+  background: var(--custom-gradient);
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.1)" points="1000,100 1000,0 0,100"/></svg>') no-repeat;
+  background-size: 100% 100%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Feature cards */
+.feature-card {
+  border: none;
+  box-shadow: var(--custom-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--custom-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Team cards */
+.team-card {
+  border: none;
+  box-shadow: var(--custom-shadow);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+.team-card img {
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Service cards */
+.service-card {
+  border-left: 4px solid var(--bs-primary);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  border-color: var(--bs-success);
+  box-shadow: var(--custom-shadow);
+}
+
+/* Contact form */
+.contact-form {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--custom-shadow);
+}
+
+.form-control {
+  border: 2px solid #e9ecef;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Footer */
+.footer {
+  background: #212529;
+  color: white;
+  padding: 3rem 0 1rem;
+}
+
+.footer a {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+/* Custom buttons */
+.btn-custom {
+  background: var(--custom-gradient);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-custom:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Section spacing */
+.section-padding {
+  padding: 80px 0;
+}
+
+/* Testimonials */
+.testimonial-card {
+  background: white;
+  border: none;
+  box-shadow: var(--custom-shadow);
+  border-radius: 15px;
+  position: relative;
+  padding: 2rem;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--bs-primary);
+  line-height: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .section-padding {
+    padding: 60px 0;
+  }
+}
+
+/* Animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom carousel */
+.custom-carousel .carousel-item {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.custom-carousel .carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}

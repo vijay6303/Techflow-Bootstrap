@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow - Bootstrap 5 UI Project</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-lightning-charge text-primary"></i>
+                TechFlow
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#services">Web Development</a></li>
+                            <li><a class="dropdown-item" href="#services">Mobile Apps</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#services">Consulting</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#getQuoteModal">
+                    Get Quote
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="display-4 fw-bold mb-4 fade-in">
+                        Build Amazing Digital Experiences
+                    </h1>
+                    <p class="lead mb-4 fade-in">
+                        We create stunning websites and mobile applications that help your business grow. 
+                        Our modern approach combines cutting-edge technology with beautiful design.
+                    </p>
+                    <div class="fade-in">
+                        <a href="#features" class="btn btn-light btn-lg me-3">
+                            <i class="bi bi-play-circle"></i> Learn More
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://via.placeholder.com/500x400/6c757d/ffffff?text=Hero+Image" 
+                         alt="Hero Image" class="img-fluid rounded shadow-lg fade-in">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold">Why Choose TechFlow?</h2>
+                    <p class="lead text-muted">
+                        We combine innovation, expertise, and dedication to deliver exceptional results
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card feature-card text-center p-4">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <h5 class="card-title">Fast Performance</h5>
+                        <p class="card-text text-muted">
+                            Lightning-fast websites that load in under 2 seconds, optimized for all devices.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card feature-card text-center p-4">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5 class="card-title">Secure & Reliable</h5>
+                        <p class="card-text text-muted">
+                            Enterprise-level security with 99.9% uptime guarantee and regular backups.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card feature-card text-center p-4">
+                        <div class="feature-icon">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h5 class="card-title">Mobile First</h5>
+                        <p class="card-text text-muted">
+                            Responsive designs that look perfect on smartphones, tablets, and desktops.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card feature-card text-center p-4">
+                        <div class="feature-icon">
+                            <i class="bi bi-palette"></i>
+                        </div>
+                        <h5 class="card-title">Beautiful Design</h5>
+                        <p class="card-text text-muted">
+                            Modern, clean designs that capture your brand essence and engage users.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card feature-card text-center p-4">
+                        <div class="feature-icon">
+                            <i class="bi bi-gear"></i>
+                        </div>
+                        <h5 class="card-title">Easy Management</h5>
+                        <p class="card-text text-muted">
+                            User-friendly content management systems that you can update yourself.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card feature-card text-center p-4">
+                        <div class="feature-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h5 class="card-title">24/7 Support</h5>
+                        <p class="card-text text-muted">
+                            Round-the-clock technical support to keep your website running smoothly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold">Our Latest Projects</h2>
+                    <p class="lead text-muted">Take a look at some of our recent work</p>
+                </div>
+            </div>
+            
+            <div id="projectCarousel" class="carousel slide custom-carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"></button>
+                </div>
+                
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active" style="background-image: url('https://via.placeholder.com/1200x500/667eea/ffffff?text=E-commerce+Platform');">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="display-6">E-commerce Platform</h5>
+                            <p>Modern online shopping experience with advanced features</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="background-image: url('https://via.placeholder.com/1200x500/764ba2/ffffff?text=Mobile+Banking+App');">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="display-6">Mobile Banking App</h5>
+                            <p>Secure and user-friendly banking application</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="background-image: url('https://via.placeholder.com/1200x500/28a745/ffffff?text=Corporate+Website');">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="display-6">Corporate Website</h5>
+                            <p>Professional business website with CMS integration</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold">What Our Clients Say</h2>
+                    <p class="lead text-muted">Don't just take our word for it</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <p class="mb-4">
+                            "TechFlow delivered an outstanding website that exceeded our expectations. 
+                            The design is beautiful and the functionality is perfect."
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://via.placeholder.com/60x60/6c757d/ffffff?text=JS" 
+                                 alt="Client" class="rounded-circle me-3">
+                            <div>
+                                <h6 class="mb-0">John Smith</h6>
+                                <small class="text-muted">CEO, TechStart Inc.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <p class="mb-4">
+                            "Professional team, excellent communication, and delivered on time. 
+                            Our mobile app is now performing exceptionally well."
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://via.placeholder.com/60x60/6c757d/ffffff?text=MD" 
+                                 alt="Client" class="rounded-circle me-3">
+                            <div>
+                                <h6 class="mb-0">Maria Davis</h6>
+                                <small class="text-muted">Founder, InnovateLab</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <p class="mb-4">
+                            "The best investment we made for our business. The new website 
+                            increased our conversion rate by 150%."
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://via.placeholder.com/60x60/6c757d/ffffff?text=RW" 
+                                 alt="Client" class="rounded-circle me-3">
+                            <div>
+                                <h6 class="mb-0">Robert Wilson</h6>
+                                <small class="text-muted">Director, GrowthCorp</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-primary text-white">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-4">Ready to Start Your Project?</h2>
+                    <p class="lead mb-4">
+                        Let's discuss how we can help bring your vision to life with our expertise
+                    </p>
+                    <a href="contact.html" class="btn btn-light btn-lg me-3">
+                        <i class="bi bi-envelope"></i> Get In Touch
+                    </a>
+                    <a href="tel:+1234567890" class="btn btn-outline-light btn-lg">
+                        <i class="bi bi-telephone"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">
+                        <i class="bi bi-lightning-charge text-primary"></i>
+                        TechFlow
+                    </h5>
+                    <p class="text-muted">
+                        Creating digital experiences that drive business growth and user engagement.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-decoration-none">
+                            <i class="bi bi-facebook fs-5"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <i class="bi bi-twitter fs-5"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <i class="bi bi-linkedin fs-5"></i>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <i class="bi bi-instagram fs-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h6 class="mb-3">Newsletter</h6>
+                    <p class="text-muted">Subscribe to get updates on our latest projects and insights.</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Your email">
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2024 TechFlow. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="me-3">Privacy Policy</a>
+                    <a href="#" class="me-3">Terms of Service</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Get Quote Modal -->
+    <div class="modal fade" id="getQuoteModal" tabindex="-1" aria-labelledby="getQuoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="getQuoteModalLabel">
+                        <i class="bi bi-calculator"></i> Get Project Quote
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="projectName" class="form-label">Project Name</label>
+                                <input type="text" class="form-control" id="projectName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="projectBudget" class="form-label">Budget Range</label>
+                                <select class="form-control" id="projectBudget">
+                                    <option>$5,000 - $10,000</option>
+                                    <option>$10,000 - $25,000</option>
+                                    <option>$25,000 - $50,000</option>
+                                    <option>$50,000+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="clientName" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="clientName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="clientEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="clientEmail" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectType" class="form-label">Project Type</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="webDev">
+                                <label class="form-check-label" for="webDev">Website Development</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="mobileApp">
+                                <label class="form-check-label" for="mobileApp">Mobile Application</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="uiDesign">
+                                <label class="form-check-label" for="uiDesign">UI/UX Design</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectDescription" class="form-label">Project Description</label>
+                            <textarea class="form-control" id="projectDescription" rows="4" 
+                                placeholder="Tell us about your project requirements..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="bi bi-send"></i> Send Quote Request
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/custom.js"></script>
+</body>
+</html>
